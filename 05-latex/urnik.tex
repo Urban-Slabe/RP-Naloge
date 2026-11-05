@@ -7,8 +7,8 @@
 
 \usepackage[slovene]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}     
-\usepackage{textcase}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}     
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb} 
@@ -25,7 +25,7 @@
 \begin{abstract}
    V članku so predstavljeni nekateri postopki za avtomatsko izdelavo urnikov. Opisani so
    potrebni vhodni podatki, naštete so omejitve, ki jih je potrebno upoštevati pri izdelavi
-   urnikov, predstavljena je tudi metoda merjenja kakovosti izdelanega urnika. Med postopki za  izdelavo urnikov najdemo požrešno metodo in optimizacijske metode
+   urnikov, predstavljena je tudi metoda merjenja kakovosti izdelanega urnika. Med postopki za  izdelavo urnikov najdemo požrešno metodo in optimizacijske metode.
 \end{abstract}% konec povzetka
 
 \section{Program za izdelavo urnika} % razdelek
@@ -248,7 +248,7 @@ sprejet s strani večine, pa bi se povečala.
 
 Kot zanimivost naj omenimo, da se nekateri programerji odločajo tudi za utežitev strogih
 omejitev s to razliko, da so vrednosti teh uteži izjemno velike, zato se bo algoritem
-(skoraj) vedno "odločil", da jih ne bo prekršil. Tak način uteževanja pride v poštev
+(skoraj) vedno \flqq odločil\frqq, da jih ne bo prekršil. Tak način uteževanja pride v poštev
 takrat, ko algoritem v osnovi ne zadosti strogim omejitvam urnika.
 
 Ko enkrat ustrezno nastavimo vrednosti uteži, je treba ugotoviti, kako bomo postopali
@@ -524,6 +524,7 @@ točk, oziroma ki ima največjo vrednost kriterijske funkcije.
 % Spodnja vrstica ne začne novega odstavka, zato ne bi smela biti zamaknjena.
 % To popravite z ukazom `\noindent` ali pa tako, da odstranite prazno vrstico.
 % (Nekoliko lepše izgleda, če v prazno vrstico vstavite % za komentar.)
+\noindent
 To je le ena izmed možnosti, kako zastaviti optimizacijski potek, s katero smo želeli predstaviti
 simbiozo opisanih metod. Nič ne bi bilo narobe, če bi za iskanje najboljšega urnika posamično
 uporabili katero izmed tehnik -- mogoče bi katero izmed teh postopanj dalo celo boljši rezultat.
@@ -531,7 +532,7 @@ uporabili katero izmed tehnik -- mogoče bi katero izmed teh postopanj dalo celo
 \subsection{Zaključek} % podrazdelek
 
 % V spodnjem odstavku naj bodo črke G, U in I v "Graphical User Interface" podčrtane.
-Sledili smo receptu in s tem izdelali "okusen obrok", treba ga je le še ustrezno postreči
+Sledili smo receptu in s tem izdelali \frqq okusen obrok\flqq, treba ga je le še ustrezno postreči
 gostom za mizo. S tem imamo v mislih grafični uporabniški vmesnik (\underline{G}raphical
 \underline{U}ser \underline{I}nterface), ki mora urnik uporabnikom predstaviti na razumljiv in
 pregleden način. Končnega izgleda izdelka nikakor ne smemo zanemariti, saj je ta med uporabniki
