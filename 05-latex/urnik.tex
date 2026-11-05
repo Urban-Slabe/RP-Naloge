@@ -25,7 +25,7 @@
 \begin{abstract}
    V članku so predstavljeni nekateri postopki za avtomatsko izdelavo urnikov. Opisani so
    potrebni vhodni podatki, naštete so omejitve, ki jih je potrebno upoštevati pri izdelavi
-   urnikov, predstavljena je tudi metoda merjenja kakovosti izdelanega urnika.
+   urnikov, predstavljena je tudi metoda merjenja kakovosti izdelanega urnika. Med postopki za  izdelavo urnikov najdemo požrešno metodo in optimizacijske metode
 \end{abstract}% konec povzetka
 
 \section{Program za izdelavo urnika} % razdelek
@@ -75,14 +75,14 @@ matematika.
 
 % začetek okolja verbatim
 \begin{verbatim}
-   <profesor>
-      <ime>Janez</ime>
-      <priimek>Novak</priimek>
-      <predmet>
-         <imePredmeta>matematika</imePredmeta>
-         <steviloUrNaTeden>3</steviloUrNaTeden>
-      </predmet>
-   </profesor>
+<profesor>
+   <ime>Janez</ime>
+   <priimek>Novak</priimek>
+   <predmet>
+      <imePredmeta>matematika</imePredmeta>
+      <steviloUrNaTeden>3</steviloUrNaTeden>
+   </predmet>
+</profesor>
 \end{verbatim}
 % konec okolja verbatim
 
@@ -151,8 +151,8 @@ dovolj, če podamo zasedenost le za en teden.
 Tip vrednosti tabele ni striktno določen. Tako bi nekateri programerji uporabili
 celoštevilsko tabelo, kjer bi vrednost 1 pomenila, da je oseba zasedena, vrednost 0
 pa bi predstavljala njeno dosegljivost. Podobno bi postopali, če bi izbrali logični
-tip (npr. \verb|bool| v C++), kjer bi vrednost true predstavljala
-dosegljivost, false pa zasedenost.
+tip (npr. \verb|bool| v C++), kjer bi vrednost \verb|true| predstavljala
+dosegljivost, \verb|false| pa zasedenost.
 
 \subsection{Omejitve} % podrazdelek
 
@@ -316,15 +316,15 @@ Naslednje vrstice bodo pojasnile, kako implementirati postopek požrešne metode
 
 % začetek okolja verbatim
 \begin{verbatim}
-   (1) Sprehod po vseh predmetih.
+(1) Sprehod po vseh predmetih.
+{
+   (2) Sprehod po vseh predavalnicah.
    {
-      (2) Sprehod po vseh predavalnicah.
-      {
-         (3) Računanje cene za proste termine.
-         (4) Primerjava cene z najboljšo.
-      }
-      (5) Vstavljanje srečanja v urnik.
+      (3) Računanje cene za proste termine.
+      (4) Primerjava cene z najboljšo.
    }
+   (5) Vstavljanje srečanja v urnik.
+}
 \end{verbatim}
 % konec okolja verbatim
 
@@ -383,6 +383,7 @@ Na primeru urnika si oglejmo, katere so smiselne operacije:
 % Spodnja vrstica ne začne novega odstavka, zato ne bi smela biti zamaknjena.
 % To popravite z ukazom `\noindent` ali pa tako, da odstranite prazno vrstico.
 % (Nekoliko lepše izgleda, če v prazno vrstico vstavite % za komentar.)
+\noindent
 \emph {Okolica} operacije je množica vseh možnih sprememb, ki jih lahko s to operacijo
 opravimo na nekem koraku optimizacijskega postopka. Okolica zamenjave dveh srečanj v urniku
 je torej množica vseh možnih zamenjav srečanj v trenutnem urniku.
@@ -406,12 +407,12 @@ Nadgradnja lokalnega vzpenjanja je jasno razvidna iz naslednje sheme.
 
 % začetek okolja verbatim
 \begin{verbatim}
-   (1) Izvajaj dokler...
-   {
-      (2) Iz sistema okolic izberi okolico.
-      (3) Iz okolice izberi spremembo.
-      (4) Izvedi spremembo.
-   }
+(1) Izvajaj dokler...
+{
+   (2) Iz sistema okolic izberi okolico.
+   (3) Iz okolice izberi spremembo.
+   (4) Izvedi spremembo.
+}
 \end{verbatim}
 % konec okolja verbatim
 
